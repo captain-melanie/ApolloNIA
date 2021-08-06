@@ -45,7 +45,7 @@ function scrape_current(tab_url) {
       }).then(data => {
         form_content.value = data["content"];
         form_title.value = data["title"];
-  
+
       }).catch(ex => {
         console.log("Exception trying to fetch the article: ", ex)
       });
@@ -124,8 +124,10 @@ function getTagArrayFromString(tagString) {
 }
 
 btn_scrape.addEventListener("click", async () => {
-  let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-  scrape_current(tab.url);
+  chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
+    let tab = tabs[0];
+    scrape_current(tab.url);
+  });
 });
 
 btn_prove.addEventListener("click", async () => {
