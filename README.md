@@ -21,3 +21,7 @@ Additionally, you will be able to customize the name displayed during log-in - f
 ## Authentication:
 ![Demo](https://github.com/dborowiec10/ApolloNIA/blob/main/Capture1.PNG?raw=true)
 ApolloNIA will persist your logged-in status whilst the browser is open. You can log-out at any time by clicking on the "Log-out" button.
+
+## Change log
+- 1.0.1: Fix backwards compatibility for [Chrome stable version](https://www.ubuntuupdates.org/package/google_chrome/stable/main/base/google-chrome-stable?id=202706&page=5) on Linux
+- 1.0.0: Fork from [ApolloNIA](https://github.com/dborowiec10/ApolloNIA)
